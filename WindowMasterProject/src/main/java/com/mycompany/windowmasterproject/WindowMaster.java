@@ -1,0 +1,72 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package com.mycompany.windowmasterproject;
+
+import java.util.Scanner;
+
+
+/**
+ *@author Kim
+ *email: kimirina45@hotmail.com
+ *date: current date
+ *purpose: My first Hello World program in an IDE
+ */
+public class WindowMaster {
+public static void main(String [] args) {
+    // declare variables for height and width
+    float height;
+    float width;
+     float numOfWindows;
+
+    // declare String variables to hold the user's height and
+    // width input
+    String stringHeight;
+    String stringWidth;
+    String stringNumOfWindows;
+
+    // declare other variables
+    float areaOfWindow;
+    float cost;
+    float perimeterOfWindow;
+   
+    
+    // declare and initialize the Scanner
+    Scanner myScanner = new Scanner(System.in);
+
+    // get input from the user
+    System.out.println("Please enter window height:");
+    stringHeight = myScanner.nextLine();
+    System.out.println("Please enter window width:");
+    stringWidth = myScanner.nextLine();
+    System.out.println("Please enter number of windows:");
+    stringNumOfWindows = myScanner.nextLine();
+    
+ // convert String values of height and width to float values
+    height = Float.parseFloat(stringHeight);
+    width = Float.parseFloat(stringWidth);
+    numOfWindows = Float.parseFloat(stringNumOfWindows);
+    
+    // calculate the area of the window
+    areaOfWindow = height * width;
+
+    // calculate the perimeter of the window
+    perimeterOfWindow = 2 * (height + width);
+    
+    // calculate the total cost - use a hard-coded value
+    // for material cost
+    cost = ((3.50f * areaOfWindow) + (2.25f * perimeterOfWindow) * numOfWindows);
+    
+        // display the results to the user
+    System.out.println("Window height = " + stringHeight);
+    System.out.println("Window width = " + stringWidth);
+    System.out.println("Number of windows = " + stringNumOfWindows);
+    System.out.println("Window area = " + areaOfWindow);
+    System.out.println("Window perimeter = " + perimeterOfWindow);
+    System.out.println("Total Cost =  " + cost);
+
+}
+}
